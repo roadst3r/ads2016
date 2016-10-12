@@ -33,7 +33,7 @@
 }
 
 
-- (void)storeADs:(NSDictionary*)dict {
+- (void)storeAds:(NSDictionary*)dict {
     
     if (!dict) return;
     

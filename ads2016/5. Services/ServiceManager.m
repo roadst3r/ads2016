@@ -8,6 +8,8 @@
 
 #import "ServiceManager.h"
 
+#import "AdsService.h"
+
 @implementation ServiceManager
 
 @synthesize mainSessionManager = _mainSessionManager;
@@ -74,12 +76,34 @@
         [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
         _mainSessionManager.requestSerializer = requestSerializer;
         
-        AFHTTPResponseSerializer *responseSerialier = [AFHTTPResponseSerializer serializer];
+        AFHTTPResponseSerializer *responseSerialier = [AFJSONResponseSerializer serializer];
         _mainSessionManager.responseSerializer = responseSerialier;
     }
     [_mainSessionManager.requestSerializer setValue: token forHTTPHeaderField:@"Authorization"];
     
     return _mainSessionManager;
 }
+
+
+#pragma mark ADS Service
+
+- (void)getADsWithSucess:(void (^)())sucess fail:(void (^)(id))fail {
+    
+    [AdsService getADsWithBlock:^(id respondeObject, NSError *err) {
+        
+        if (err) {
+            //throw error
+        } else {
+            
+            [[MainManager shared].dataManager storeAds: respondeObject];
+        }
+         
+    }];
+    
+}
+
+
+
+
 
 @end

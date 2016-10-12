@@ -21,6 +21,12 @@
     
     [self setupReachability];
     
+    [[MainManager shared].serviceManager getADsWithSucess:^{
+        
+    } fail:^(id errorMessage) {
+        
+    }];
+    
     return YES;
 }
 

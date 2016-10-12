@@ -16,4 +16,9 @@
 + (instancetype)shared;
 
 
+
+- (void)getADsWithSucess:(void (^)())sucess fail:(void(^)(id errorMessage)) fail;
+
+
+
 @end

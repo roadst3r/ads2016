@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>WS_ENDPOINT1</key>
-	<string></string>
+	<key>WS_POINT_ADS</key>
+	<string>ads/?json=1&amp;search[category_id]=%d</string>
 	<key>WS_URL</key>
-	<string>http://</string>
+	<string>https://olx.pt/i2</string>
 </dict>
 </plist>

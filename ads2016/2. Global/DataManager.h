@@ -15,4 +15,7 @@
 
 @property (strong, nonatomic) NSMutableArray *ads;
 
+
+-(void)storeAds:(NSDictionary*)dict;
+
 @end

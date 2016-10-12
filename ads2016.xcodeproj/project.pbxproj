@@ -19,6 +19,7 @@
 		C4D6046B1DAE51A10092A015 /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6046A1DAE51A10092A015 /* ServiceManager.m */; };
 		C4D6046E1DAE54D30092A015 /* StringServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6046D1DAE54D30092A015 /* StringServer.m */; };
 		C4D604711DAE569E0092A015 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604701DAE569E0092A015 /* AppDelegate.m */; };
+		C4D604741DAE574A0092A015 /* AdsService.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604731DAE574A0092A015 /* AdsService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		C4D6046D1DAE54D30092A015 /* StringServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringServer.m; sourceTree = "<group>"; };
 		C4D6046F1DAE569E0092A015 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4D604701DAE569E0092A015 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C4D604721DAE574A0092A015 /* AdsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsService.h; sourceTree = "<group>"; };
+		C4D604731DAE574A0092A015 /* AdsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,8 @@
 			children = (
 				C4D604691DAE51A10092A015 /* ServiceManager.h */,
 				C4D6046A1DAE51A10092A015 /* ServiceManager.m */,
+				C4D604721DAE574A0092A015 /* AdsService.h */,
+				C4D604731DAE574A0092A015 /* AdsService.m */,
 			);
 			path = "5. Services";
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D604741DAE574A0092A015 /* AdsService.m in Sources */,
 				C4D604651DAE50F40092A015 /* MainManager.m in Sources */,
 				C4D604681DAE51020092A015 /* DataManager.m in Sources */,
 				C4D6046B1DAE51A10092A015 /* ServiceManager.m in Sources */,
