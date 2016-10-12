@@ -18,7 +18,7 @@
 
 
 
-- (void)getADsForPage:(NSInteger)page category:(double)category withSucess:(void (^)())sucess fail:(void(^)(NSError *error)) fail;
+- (void)getADsForPage:(NSInteger)page category:(double)category withSuccess:(void (^)())sucess fail:(void(^)(NSError *error)) fail;
 
 
 

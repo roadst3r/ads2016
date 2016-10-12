@@ -58,7 +58,7 @@
 @property (nonatomic, assign) double categoryId;
 @property (nonatomic, strong) ADPhotos *photos;
 @property (nonatomic, strong) NSString *userPhoto;
-@property (nonatomic, assign) id campaignSource;
+@property (nonatomic, assign) NSString *campaignSource;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

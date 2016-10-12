@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>WS_POINT_ADS</key>
-	<string>ads/?json=1&amp;search[category_id]=%d</string>
+	<string>ads/?json=1&amp;search[category_id]=%.0f</string>
 	<key>WS_URL</key>
 	<string>https://olx.pt/i2</string>
 </dict>

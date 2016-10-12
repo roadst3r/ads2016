@@ -27,7 +27,7 @@
     if (self) {
         
         //init lists
-        
+        self.adRequest = [[ADRequest alloc] init];
     }
     return self;
 }
@@ -49,10 +49,10 @@
     ADRequest *thisRequest = [[ADRequest alloc] initWithDictionary: dict];
     [adsList addObjectsFromArray: thisRequest.ads];
     
-    
     self.adRequest.nextPageUrl = thisRequest.nextPageUrl;
     self.adRequest.page = thisRequest.page;
     self.adRequest.ads = [NSArray arrayWithArray: adsList];
+
 }
 
 @end

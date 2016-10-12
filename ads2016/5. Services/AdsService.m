@@ -13,6 +13,10 @@
 
 + (void)getADsForPage:(NSInteger)page category:(double)category withBlock:(void (^)(id, NSError *))block{
     
+    //check if its a reload data
+    if (page == 1){
+        [MainManager shared].dataManager.adRequest = [[ADRequest alloc] init];
+    }
     
     AFHTTPSessionManager *manager = [[ServiceManager shared] mainSessionManager];
     

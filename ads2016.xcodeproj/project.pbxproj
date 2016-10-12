@@ -24,6 +24,9 @@
 		C4D604801DAE5AE40092A015 /* ADData.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6047A1DAE5AE40092A015 /* ADData.m */; };
 		C4D604811DAE5AE40092A015 /* ADPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6047C1DAE5AE40092A015 /* ADPhotos.m */; };
 		C4D604821DAE5AE40092A015 /* ADRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6047E1DAE5AE40092A015 /* ADRequest.m */; };
+		C4D604861DAE5FAA0092A015 /* ADsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604851DAE5FAA0092A015 /* ADsTableViewController.m */; };
+		C4D6048B1DAE61420092A015 /* ADTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604891DAE61420092A015 /* ADTableViewCell.m */; };
+		C4D6048C1DAE61420092A015 /* ADTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D6048A1DAE61420092A015 /* ADTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,11 @@
 		C4D6047C1DAE5AE40092A015 /* ADPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPhotos.m; sourceTree = "<group>"; };
 		C4D6047D1DAE5AE40092A015 /* ADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADRequest.h; sourceTree = "<group>"; };
 		C4D6047E1DAE5AE40092A015 /* ADRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADRequest.m; sourceTree = "<group>"; };
+		C4D604841DAE5FAA0092A015 /* ADsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADsTableViewController.h; sourceTree = "<group>"; };
+		C4D604851DAE5FAA0092A015 /* ADsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADsTableViewController.m; sourceTree = "<group>"; };
+		C4D604881DAE61420092A015 /* ADTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTableViewCell.h; sourceTree = "<group>"; };
+		C4D604891DAE61420092A015 /* ADTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTableViewCell.m; sourceTree = "<group>"; };
+		C4D6048A1DAE61420092A015 /* ADTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +208,8 @@
 		C4D6045A1DAE4DC70092A015 /* 6. AppFlow */ = {
 			isa = PBXGroup;
 			children = (
+				C4D604871DAE612E0092A015 /* Cells */,
+				C4D604831DAE5F8E0092A015 /* ViewControllers */,
 				C4D6045B1DAE4DD50092A015 /* Storyboards */,
 			);
 			path = "6. AppFlow";
@@ -227,6 +237,25 @@
 				C4D6047E1DAE5AE40092A015 /* ADRequest.m */,
 			);
 			name = ADs;
+			sourceTree = "<group>";
+		};
+		C4D604831DAE5F8E0092A015 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4D604841DAE5FAA0092A015 /* ADsTableViewController.h */,
+				C4D604851DAE5FAA0092A015 /* ADsTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C4D604871DAE612E0092A015 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C4D604881DAE61420092A015 /* ADTableViewCell.h */,
+				C4D604891DAE61420092A015 /* ADTableViewCell.m */,
+				C4D6048A1DAE61420092A015 /* ADTableViewCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +324,7 @@
 				C4D6045E1DAE4EA90092A015 /* WebService.plist in Resources */,
 				C4D6044A1DAE4C330092A015 /* Assets.xcassets in Resources */,
 				C4D604481DAE4C330092A015 /* Main.storyboard in Resources */,
+				C4D6048C1DAE61420092A015 /* ADTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +395,8 @@
 				C4D6043F1DAE4C330092A015 /* main.m in Sources */,
 				C4D604801DAE5AE40092A015 /* ADData.m in Sources */,
 				C4D604711DAE569E0092A015 /* AppDelegate.m in Sources */,
+				C4D6048B1DAE61420092A015 /* ADTableViewCell.m in Sources */,
+				C4D604861DAE5FAA0092A015 /* ADsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
