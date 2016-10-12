@@ -9,6 +9,7 @@
 #import "ADsTableViewController.h"
 #import "ADTableViewCell.h"
 #import "LoadingMoreTableViewCell.h"
+#import "ADPageViewController.h"
 
 #define ADCellIdentifier    @"ADCell"
 
@@ -34,13 +35,15 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self setupTable];
+    
+    [self loadDataForPage:1];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear: animated];
-    [self loadDataForPage:1];
+    
     
 }
 - (void)didReceiveMemoryWarning {
@@ -56,6 +59,9 @@
     
     UINib *nib2 = [UINib nibWithNibName:@"LoadingMoreTableViewCell" bundle:nil];
     [[self tableView] registerNib:nib2 forCellReuseIdentifier: @"loadingCell"];
+    
+    
+    self.tableView.backgroundColor = [UIColor defaultBackgroundColor];
     
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -134,11 +140,45 @@
         ADAds *ad = [[MainManager shared].dataManager.adRequest.ads objectAtIndex: indexPath.row];
         
         cell.titleLabel.text = ad.title;
+        cell.addressLabel.text = ad.cityLabel;
+        cell.priceLabel.text =  [ad.priceNumeric stringByAppendingString:@"€"];
+        cell.timeLabel.text = ad.created;
+        
         
         return cell;
         
     }
     
+}
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath: indexPath];
+    
+    if ([cell isKindOfClass: [ADTableViewCell class]]){
+        
+        _selectedAD = indexPath.row;
+        [self performSegueWithIdentifier:@"showADDetails" sender:tableView];
+
+
+//implement already read later
+//        notification.read = YES;
+//        [self.tableView beginUpdates];
+//        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//        [self.tableView endUpdates];
+        
+        
+        
+    }
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 96;
 }
 
 
@@ -176,14 +216,19 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"showADDetails"]) {
+        
+        ADPageViewController *viewController = [segue destinationViewController];
+        ADAds *ad = [[MainManager shared].dataManager.adRequest.ads objectAtIndex: _selectedAD];
+        viewController.ads = [MainManager shared].dataManager.adRequest.ads;
+        viewController.selectedAD = ad;
+    }
 }
-*/
+
 
 @end

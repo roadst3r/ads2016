@@ -29,6 +29,15 @@
 		C4D6048C1DAE61420092A015 /* ADTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D6048A1DAE61420092A015 /* ADTableViewCell.xib */; };
 		C4D604901DAE69410092A015 /* LoadingMoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6048E1DAE69410092A015 /* LoadingMoreTableViewCell.m */; };
 		C4D604911DAE69410092A015 /* LoadingMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D6048F1DAE69410092A015 /* LoadingMoreTableViewCell.xib */; };
+		C4D604941DAEE8330092A015 /* ClearNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604931DAEE8330092A015 /* ClearNavigationController.m */; };
+		C4D604971DAEECAE0092A015 /* ADDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604961DAEECAE0092A015 /* ADDetailsViewController.m */; };
+		C4D6049A1DAEEDB40092A015 /* ADPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604991DAEEDB40092A015 /* ADPageViewController.m */; };
+		C4D6049E1DAEF8C10092A015 /* ADDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6049D1DAEF8C10092A015 /* ADDetailsTableViewCell.m */; };
+		C4D604A11DAEF9F30092A015 /* ADPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604A01DAEF9F30092A015 /* ADPhotoTableViewCell.m */; };
+		C4D604A41DAEF9FC0092A015 /* ADMapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604A31DAEF9FC0092A015 /* ADMapTableViewCell.m */; };
+		C4D604A71DAEFA080092A015 /* ADDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604A61DAEFA080092A015 /* ADDescriptionTableViewCell.m */; };
+		C4D604AA1DAEFA120092A015 /* ADPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604A91DAEFA120092A015 /* ADPriceTableViewCell.m */; };
+		C4D604AC1DAEFB3A0092A015 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D604AB1DAEFB3A0092A015 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +84,23 @@
 		C4D6048D1DAE69410092A015 /* LoadingMoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingMoreTableViewCell.h; sourceTree = "<group>"; };
 		C4D6048E1DAE69410092A015 /* LoadingMoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingMoreTableViewCell.m; sourceTree = "<group>"; };
 		C4D6048F1DAE69410092A015 /* LoadingMoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingMoreTableViewCell.xib; sourceTree = "<group>"; };
+		C4D604921DAEE8330092A015 /* ClearNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearNavigationController.h; sourceTree = "<group>"; };
+		C4D604931DAEE8330092A015 /* ClearNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearNavigationController.m; sourceTree = "<group>"; };
+		C4D604951DAEECAE0092A015 /* ADDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDetailsViewController.h; sourceTree = "<group>"; };
+		C4D604961DAEECAE0092A015 /* ADDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDetailsViewController.m; sourceTree = "<group>"; };
+		C4D604981DAEEDB40092A015 /* ADPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPageViewController.h; sourceTree = "<group>"; };
+		C4D604991DAEEDB40092A015 /* ADPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPageViewController.m; sourceTree = "<group>"; };
+		C4D6049C1DAEF8C10092A015 /* ADDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDetailsTableViewCell.h; sourceTree = "<group>"; };
+		C4D6049D1DAEF8C10092A015 /* ADDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDetailsTableViewCell.m; sourceTree = "<group>"; };
+		C4D6049F1DAEF9F30092A015 /* ADPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPhotoTableViewCell.h; sourceTree = "<group>"; };
+		C4D604A01DAEF9F30092A015 /* ADPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPhotoTableViewCell.m; sourceTree = "<group>"; };
+		C4D604A21DAEF9FC0092A015 /* ADMapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMapTableViewCell.h; sourceTree = "<group>"; };
+		C4D604A31DAEF9FC0092A015 /* ADMapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMapTableViewCell.m; sourceTree = "<group>"; };
+		C4D604A51DAEFA080092A015 /* ADDescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDescriptionTableViewCell.h; sourceTree = "<group>"; };
+		C4D604A61DAEFA080092A015 /* ADDescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDescriptionTableViewCell.m; sourceTree = "<group>"; };
+		C4D604A81DAEFA120092A015 /* ADPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPriceTableViewCell.h; sourceTree = "<group>"; };
+		C4D604A91DAEFA120092A015 /* ADPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPriceTableViewCell.m; sourceTree = "<group>"; };
+		C4D604AB1DAEFB3A0092A015 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D604AC1DAEFB3A0092A015 /* MapKit.framework in Frameworks */,
 				A536480FA9FF9C274C0F53F4 /* Pods_ads2016.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +119,7 @@
 		0AEC53DB2EDFF40DD46C08F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4D604AB1DAEFB3A0092A015 /* MapKit.framework */,
 				6730737C10507B067C8469E2 /* Pods_ads2016.framework */,
 			);
 			name = Frameworks;
@@ -195,6 +223,8 @@
 		C4D604581DAE4DC70092A015 /* 4. Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C4D604921DAEE8330092A015 /* ClearNavigationController.h */,
+				C4D604931DAEE8330092A015 /* ClearNavigationController.m */,
 			);
 			path = "4. Controllers";
 			sourceTree = "<group>";
@@ -249,6 +279,10 @@
 			children = (
 				C4D604841DAE5FAA0092A015 /* ADsTableViewController.h */,
 				C4D604851DAE5FAA0092A015 /* ADsTableViewController.m */,
+				C4D604951DAEECAE0092A015 /* ADDetailsViewController.h */,
+				C4D604961DAEECAE0092A015 /* ADDetailsViewController.m */,
+				C4D604981DAEEDB40092A015 /* ADPageViewController.h */,
+				C4D604991DAEEDB40092A015 /* ADPageViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -256,6 +290,7 @@
 		C4D604871DAE612E0092A015 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C4D6049B1DAEF85A0092A015 /* ADDetails */,
 				C4D604881DAE61420092A015 /* ADTableViewCell.h */,
 				C4D604891DAE61420092A015 /* ADTableViewCell.m */,
 				C4D6048A1DAE61420092A015 /* ADTableViewCell.xib */,
@@ -264,6 +299,23 @@
 				C4D6048F1DAE69410092A015 /* LoadingMoreTableViewCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		C4D6049B1DAEF85A0092A015 /* ADDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C4D6049C1DAEF8C10092A015 /* ADDetailsTableViewCell.h */,
+				C4D6049D1DAEF8C10092A015 /* ADDetailsTableViewCell.m */,
+				C4D6049F1DAEF9F30092A015 /* ADPhotoTableViewCell.h */,
+				C4D604A01DAEF9F30092A015 /* ADPhotoTableViewCell.m */,
+				C4D604A21DAEF9FC0092A015 /* ADMapTableViewCell.h */,
+				C4D604A31DAEF9FC0092A015 /* ADMapTableViewCell.m */,
+				C4D604A51DAEFA080092A015 /* ADDescriptionTableViewCell.h */,
+				C4D604A61DAEFA080092A015 /* ADDescriptionTableViewCell.m */,
+				C4D604A81DAEFA120092A015 /* ADPriceTableViewCell.h */,
+				C4D604A91DAEFA120092A015 /* ADPriceTableViewCell.m */,
+			);
+			name = ADDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +354,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = K8RW44DJ22;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -392,12 +449,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D6049E1DAEF8C10092A015 /* ADDetailsTableViewCell.m in Sources */,
+				C4D6049A1DAEEDB40092A015 /* ADPageViewController.m in Sources */,
 				C4D604811DAE5AE40092A015 /* ADPhotos.m in Sources */,
+				C4D604A11DAEF9F30092A015 /* ADPhotoTableViewCell.m in Sources */,
+				C4D604AA1DAEFA120092A015 /* ADPriceTableViewCell.m in Sources */,
+				C4D604941DAEE8330092A015 /* ClearNavigationController.m in Sources */,
 				C4D604741DAE574A0092A015 /* AdsService.m in Sources */,
 				C4D604651DAE50F40092A015 /* MainManager.m in Sources */,
 				C4D604681DAE51020092A015 /* DataManager.m in Sources */,
 				C4D6046B1DAE51A10092A015 /* ServiceManager.m in Sources */,
 				C4D6046E1DAE54D30092A015 /* StringServer.m in Sources */,
+				C4D604971DAEECAE0092A015 /* ADDetailsViewController.m in Sources */,
+				C4D604A71DAEFA080092A015 /* ADDescriptionTableViewCell.m in Sources */,
+				C4D604A41DAEF9FC0092A015 /* ADMapTableViewCell.m in Sources */,
 				C4D604611DAE4F370092A015 /* UIColor+Custom.m in Sources */,
 				C4D6047F1DAE5AE40092A015 /* ADAds.m in Sources */,
 				C4D604901DAE69410092A015 /* LoadingMoreTableViewCell.m in Sources */,
@@ -531,6 +596,7 @@
 			baseConfigurationReference = 009ACF7B4702E443A27C12BB /* Pods-ads2016.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = K8RW44DJ22;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/ads2016/Ads2016-Prefix.pch";
 				INFOPLIST_FILE = ads2016/Info.plist;

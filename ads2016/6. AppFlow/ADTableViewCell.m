@@ -13,6 +13,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+        
+    self.contentView.backgroundColor = [UIColor clearColor];
+    self.contentView.layer.shadowOpacity = 0.1;
+    self.contentView.layer.shadowOffset = CGSizeMake(0, 0);
+    self.contentView.layer.shadowRadius = 3;
+    self.contentView.layer.masksToBounds = NO;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
