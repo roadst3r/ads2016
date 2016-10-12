@@ -21,9 +21,9 @@
     
     [self setupReachability];
     
-    [[MainManager shared].serviceManager getADsWithSucess:^{
+    [[MainManager shared].serviceManager getADsForPage:1 category:25 withSucess:^{
         
-    } fail:^(id errorMessage) {
+    } fail:^(NSError *error) {
         
     }];
     

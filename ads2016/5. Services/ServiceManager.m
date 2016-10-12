@@ -87,18 +87,19 @@
 
 #pragma mark ADS Service
 
-- (void)getADsWithSucess:(void (^)())sucess fail:(void (^)(id))fail {
+- (void)getADsForPage:(NSInteger)page category:(double)category withSucess:(void (^)())sucess fail:(void(^)(NSError *error)) fail {
     
-    [AdsService getADsWithBlock:^(id respondeObject, NSError *err) {
-        
+    
+    [AdsService getADsForPage:page category:category withBlock:^(id responseObject, NSError *err) {
         if (err) {
             //throw error
         } else {
             
-            [[MainManager shared].dataManager storeAds: respondeObject];
+            [[MainManager shared].dataManager storeAds: responseObject];
         }
-         
+        
     }];
+    
     
 }
 

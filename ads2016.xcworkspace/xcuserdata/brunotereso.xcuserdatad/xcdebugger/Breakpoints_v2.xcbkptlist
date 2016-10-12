@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ads2016/5. Services/AdsService.m"
-            timestampString = "497965089.656674"
+            timestampString = "497966718.196477"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "+getADsWithBlock:"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "+getADsForPage:category:withBlock:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ads2016/5. Services/AdsService.m"
-            timestampString = "497965090.426664"
+            timestampString = "497966718.196477"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "+getADsWithBlock:"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "+getADsForPage:category:withBlock:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ads2016/5. Services/ServiceManager.m"
-            timestampString = "497965361.861258"
+            filePath = "ads2016/5. Services/AdsService.m"
+            timestampString = "497966166.788293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-getADsWithSucess:fail:"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "+getADsForPage:category:withBlock:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ads2016/2. Global/DataManager.m"
+            timestampString = "497966559.785775"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-storeAds:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -37,7 +37,22 @@
     
     if (!dict) return;
     
-    //_ads = store ads from WS dict
+    NSMutableArray *adsList = [NSMutableArray array];
+    
+    //get previous adds if they exust
+    //previous adds
+    if (self.adRequest.ads.count > 0) {
+        [adsList addObjectsFromArray: self.adRequest.ads];
+    }
+    
+    //add new ADs
+    ADRequest *thisRequest = [[ADRequest alloc] initWithDictionary: dict];
+    [adsList addObjectsFromArray: thisRequest.ads];
+    
+    
+    self.adRequest.nextPageUrl = thisRequest.nextPageUrl;
+    self.adRequest.page = thisRequest.page;
+    self.adRequest.ads = [NSArray arrayWithArray: adsList];
 }
 
 @end

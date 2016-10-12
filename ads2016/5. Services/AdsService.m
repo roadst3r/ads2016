@@ -10,12 +10,19 @@
 
 @implementation AdsService
 
-+ (void)getADsWithBlock:(void (^)(id, NSError *))block{
+
++ (void)getADsForPage:(NSInteger)page category:(double)category withBlock:(void (^)(id, NSError *))block{
     
     
     AFHTTPSessionManager *manager = [[ServiceManager shared] mainSessionManager];
     
-    NSString *ws =  [NSString stringWithFormat: [StringServer stringFromList:@"WebService" key:@"WS_POINT_ADS"], 25];
+    NSString *ws =  [NSString stringWithFormat: [StringServer stringFromList:@"WebService" key:@"WS_POINT_ADS"], category];
+    
+    //check if there's a previous request
+    NSString *previousRequest = [MainManager shared].dataManager.adRequest.nextPageUrl;
+    if (previousRequest){
+        ws = previousRequest;
+    }
     
     [manager GET: ws parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         

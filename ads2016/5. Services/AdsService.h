@@ -10,6 +10,6 @@
 
 @interface AdsService : NSObject
 
-+ (void)getADsWithBlock:(void (^)(id, NSError *))block;
++ (void)getADsForPage:(NSInteger)page category:(double)category withBlock:(void (^)(id, NSError *))block;
 
 @end

@@ -20,6 +20,7 @@
 
 #import "MainManager.h"
 #import "StringServer.h"
+#import "DataModels.h"
 
 #import "UIColor+Custom.h"
 

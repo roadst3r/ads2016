@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DataModels.h"
 
 @interface DataManager : NSObject
 
 + (instancetype)shared;
 
 
-@property (strong, nonatomic) NSMutableArray *ads;
+@property (strong, nonatomic) ADRequest *adRequest;
 
 
 -(void)storeAds:(NSDictionary*)dict;

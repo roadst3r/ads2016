@@ -20,6 +20,10 @@
 		C4D6046E1DAE54D30092A015 /* StringServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6046D1DAE54D30092A015 /* StringServer.m */; };
 		C4D604711DAE569E0092A015 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604701DAE569E0092A015 /* AppDelegate.m */; };
 		C4D604741DAE574A0092A015 /* AdsService.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604731DAE574A0092A015 /* AdsService.m */; };
+		C4D6047F1DAE5AE40092A015 /* ADAds.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604781DAE5AE40092A015 /* ADAds.m */; };
+		C4D604801DAE5AE40092A015 /* ADData.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6047A1DAE5AE40092A015 /* ADData.m */; };
+		C4D604811DAE5AE40092A015 /* ADPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6047C1DAE5AE40092A015 /* ADPhotos.m */; };
+		C4D604821DAE5AE40092A015 /* ADRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6047E1DAE5AE40092A015 /* ADRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,15 @@
 		C4D604701DAE569E0092A015 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C4D604721DAE574A0092A015 /* AdsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsService.h; sourceTree = "<group>"; };
 		C4D604731DAE574A0092A015 /* AdsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsService.m; sourceTree = "<group>"; };
+		C4D604761DAE5ADD0092A015 /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
+		C4D604771DAE5AE40092A015 /* ADAds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADAds.h; sourceTree = "<group>"; };
+		C4D604781DAE5AE40092A015 /* ADAds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADAds.m; sourceTree = "<group>"; };
+		C4D604791DAE5AE40092A015 /* ADData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADData.h; sourceTree = "<group>"; };
+		C4D6047A1DAE5AE40092A015 /* ADData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADData.m; sourceTree = "<group>"; };
+		C4D6047B1DAE5AE40092A015 /* ADPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPhotos.h; sourceTree = "<group>"; };
+		C4D6047C1DAE5AE40092A015 /* ADPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPhotos.m; sourceTree = "<group>"; };
+		C4D6047D1DAE5AE40092A015 /* ADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADRequest.h; sourceTree = "<group>"; };
+		C4D6047E1DAE5AE40092A015 /* ADRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +171,8 @@
 		C4D604571DAE4DC70092A015 /* 3. Model */ = {
 			isa = PBXGroup;
 			children = (
+				C4D604761DAE5ADD0092A015 /* DataModels.h */,
+				C4D604751DAE5AD20092A015 /* ADs */,
 				C4D604661DAE51020092A015 /* DataManager.h */,
 				C4D604671DAE51020092A015 /* DataManager.m */,
 			);
@@ -197,6 +212,21 @@
 				C4D6044B1DAE4C330092A015 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		C4D604751DAE5AD20092A015 /* ADs */ = {
+			isa = PBXGroup;
+			children = (
+				C4D604771DAE5AE40092A015 /* ADAds.h */,
+				C4D604781DAE5AE40092A015 /* ADAds.m */,
+				C4D604791DAE5AE40092A015 /* ADData.h */,
+				C4D6047A1DAE5AE40092A015 /* ADData.m */,
+				C4D6047B1DAE5AE40092A015 /* ADPhotos.h */,
+				C4D6047C1DAE5AE40092A015 /* ADPhotos.m */,
+				C4D6047D1DAE5AE40092A015 /* ADRequest.h */,
+				C4D6047E1DAE5AE40092A015 /* ADRequest.m */,
+			);
+			name = ADs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,13 +353,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D604811DAE5AE40092A015 /* ADPhotos.m in Sources */,
 				C4D604741DAE574A0092A015 /* AdsService.m in Sources */,
 				C4D604651DAE50F40092A015 /* MainManager.m in Sources */,
 				C4D604681DAE51020092A015 /* DataManager.m in Sources */,
 				C4D6046B1DAE51A10092A015 /* ServiceManager.m in Sources */,
 				C4D6046E1DAE54D30092A015 /* StringServer.m in Sources */,
 				C4D604611DAE4F370092A015 /* UIColor+Custom.m in Sources */,
+				C4D6047F1DAE5AE40092A015 /* ADAds.m in Sources */,
+				C4D604821DAE5AE40092A015 /* ADRequest.m in Sources */,
 				C4D6043F1DAE4C330092A015 /* main.m in Sources */,
+				C4D604801DAE5AE40092A015 /* ADData.m in Sources */,
 				C4D604711DAE569E0092A015 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
