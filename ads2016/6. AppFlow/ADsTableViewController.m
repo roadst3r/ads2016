@@ -8,12 +8,14 @@
 
 #import "ADsTableViewController.h"
 #import "ADTableViewCell.h"
+#import "LoadingMoreTableViewCell.h"
 
 #define ADCellIdentifier    @"ADCell"
 
 @interface ADsTableViewController () {
     
     double _selectedAD;
+    BOOL _loadingMoreTableViewData;
 }
 
 @end
@@ -22,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _loadingMoreTableViewData = NO;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -50,6 +54,9 @@
     UINib *nib = [UINib nibWithNibName:@"ADTableViewCell" bundle:nil];
     [[self tableView] registerNib:nib forCellReuseIdentifier: ADCellIdentifier];
     
+    UINib *nib2 = [UINib nibWithNibName:@"LoadingMoreTableViewCell" bundle:nil];
+    [[self tableView] registerNib:nib2 forCellReuseIdentifier: @"loadingCell"];
+    
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor clearColor];
@@ -70,16 +77,22 @@
     
     [[MainManager shared].serviceManager getADsForPage:nextPageSkip category:25 withSuccess:^{
         
+        _loadingMoreTableViewData = NO;
         [self.refreshControl endRefreshing];
         [self.tableView reloadData];
         
     } fail:^(NSError *error) {
         
+        _loadingMoreTableViewData = NO;
         [self.refreshControl endRefreshing];
         //show error
     }];
-    
+}
 
+- (void)addSomeMoreEntriesToTableView {
+    
+    //any number except 1 works, not using page number but nextPage url
+    [self loadDataForPage: 2];
 }
 
 
@@ -92,19 +105,40 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return [MainManager shared].dataManager.adRequest.ads.count;
+    ADRequest *request = [MainManager shared].dataManager.adRequest;
+    NSUInteger rows = request.ads.count;
+    
+    if (request.page != request.totalPages)
+        rows++;
+    
+    return rows;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+
+    //check for last cell and load more
+    if (indexPath.row == [MainManager shared].dataManager.adRequest.ads.count) {
+        if (!_loadingMoreTableViewData) {
+            _loadingMoreTableViewData = YES;
+            [self performSelector:@selector(addSomeMoreEntriesToTableView) withObject:nil afterDelay:0.1f];
+        }
+        
+        LoadingMoreTableViewCell *cell = (LoadingMoreTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"loadingCell"];
+        return cell;
+        
+    } else {
+        
+        ADTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: ADCellIdentifier];
+        ADAds *ad = [[MainManager shared].dataManager.adRequest.ads objectAtIndex: indexPath.row];
+        
+        cell.titleLabel.text = ad.title;
+        
+        return cell;
+        
+    }
     
-    ADTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: ADCellIdentifier];
-    ADAds *ad = [[MainManager shared].dataManager.adRequest.ads objectAtIndex: indexPath.row];
-    
-    cell.titleLabel.text = ad.title;
-    
-    return cell;
 }
 
 

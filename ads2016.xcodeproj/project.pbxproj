@@ -27,6 +27,8 @@
 		C4D604861DAE5FAA0092A015 /* ADsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604851DAE5FAA0092A015 /* ADsTableViewController.m */; };
 		C4D6048B1DAE61420092A015 /* ADTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604891DAE61420092A015 /* ADTableViewCell.m */; };
 		C4D6048C1DAE61420092A015 /* ADTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D6048A1DAE61420092A015 /* ADTableViewCell.xib */; };
+		C4D604901DAE69410092A015 /* LoadingMoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6048E1DAE69410092A015 /* LoadingMoreTableViewCell.m */; };
+		C4D604911DAE69410092A015 /* LoadingMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D6048F1DAE69410092A015 /* LoadingMoreTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,9 @@
 		C4D604881DAE61420092A015 /* ADTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTableViewCell.h; sourceTree = "<group>"; };
 		C4D604891DAE61420092A015 /* ADTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTableViewCell.m; sourceTree = "<group>"; };
 		C4D6048A1DAE61420092A015 /* ADTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADTableViewCell.xib; sourceTree = "<group>"; };
+		C4D6048D1DAE69410092A015 /* LoadingMoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingMoreTableViewCell.h; sourceTree = "<group>"; };
+		C4D6048E1DAE69410092A015 /* LoadingMoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingMoreTableViewCell.m; sourceTree = "<group>"; };
+		C4D6048F1DAE69410092A015 /* LoadingMoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingMoreTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +259,9 @@
 				C4D604881DAE61420092A015 /* ADTableViewCell.h */,
 				C4D604891DAE61420092A015 /* ADTableViewCell.m */,
 				C4D6048A1DAE61420092A015 /* ADTableViewCell.xib */,
+				C4D6048D1DAE69410092A015 /* LoadingMoreTableViewCell.h */,
+				C4D6048E1DAE69410092A015 /* LoadingMoreTableViewCell.m */,
+				C4D6048F1DAE69410092A015 /* LoadingMoreTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -323,6 +331,7 @@
 				C4D6044D1DAE4C330092A015 /* LaunchScreen.storyboard in Resources */,
 				C4D6045E1DAE4EA90092A015 /* WebService.plist in Resources */,
 				C4D6044A1DAE4C330092A015 /* Assets.xcassets in Resources */,
+				C4D604911DAE69410092A015 /* LoadingMoreTableViewCell.xib in Resources */,
 				C4D604481DAE4C330092A015 /* Main.storyboard in Resources */,
 				C4D6048C1DAE61420092A015 /* ADTableViewCell.xib in Resources */,
 			);
@@ -391,6 +400,7 @@
 				C4D6046E1DAE54D30092A015 /* StringServer.m in Sources */,
 				C4D604611DAE4F370092A015 /* UIColor+Custom.m in Sources */,
 				C4D6047F1DAE5AE40092A015 /* ADAds.m in Sources */,
+				C4D604901DAE69410092A015 /* LoadingMoreTableViewCell.m in Sources */,
 				C4D604821DAE5AE40092A015 /* ADRequest.m in Sources */,
 				C4D6043F1DAE4C330092A015 /* main.m in Sources */,
 				C4D604801DAE5AE40092A015 /* ADData.m in Sources */,
