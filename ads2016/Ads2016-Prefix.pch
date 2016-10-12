@@ -1,0 +1,27 @@
+//
+//  Ads2016-Prefix.pch
+//  ads2016
+//
+//  Created by Bruno Tereso on 12/10/16.
+//  Copyright © 2016 Bruno Tereso. All rights reserved.
+//
+
+#ifndef Ads2016_Prefix_pch
+#define Ads2016_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Defines.h"
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+
+#import "MainManager.h"
+#import "StringServer.h"
+
+#import "UIColor+Custom.h"
+
+
+#endif /* Ads2016_Prefix_pch */

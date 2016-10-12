@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    [self setupReachability];
+    
     return YES;
 }
 
@@ -47,5 +51,29 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+#pragma mark Reachability
+- (void)setupReachability {
+    //REACHABILITY
+    
+    [MainManager shared].isOnline = YES;
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown:
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                [MainManager shared].isOnline = YES;
+                //                [[MainManager shared] showOfflineWarning: NO];
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                [MainManager shared].isOnline = NO;
+                //                [[MainManager shared] showOfflineWarning: YES];
+                break;
+            default:
+                break;
+        }
+    }];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+}
 
 @end

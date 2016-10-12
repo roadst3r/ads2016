@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIColor+Custom.h
 //  ads2016
 //
 //  Created by Bruno Tereso on 12/10/16.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface UIColor (Custom)
 
+
++ (UIColor *)defaultBackgroundColor;
++ (UIColor *)defaultForegroundColor;
 
 @end
-
