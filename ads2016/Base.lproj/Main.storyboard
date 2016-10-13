@@ -291,7 +291,7 @@
         <scene sceneID="eFt-Rl-Csg">
             <objects>
                 <navigationController id="HDl-f2-uln" customClass="ClearNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sFa-mm-pAT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sFa-mm-pAT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.40784313729999999" green="0.67450980390000004" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
