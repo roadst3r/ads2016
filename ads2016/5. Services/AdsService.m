@@ -39,6 +39,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         if (block){
+            NSLog(@"%@", error);
             block(nil, error);
         }
     }];

@@ -19,4 +19,8 @@
 
 -(void)storeAds:(NSDictionary*)dict;
 
+
+- (void)saveDataToDisk;
+- (void)loadDataFromDisk;
+
 @end

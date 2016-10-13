@@ -49,6 +49,9 @@
                                     <constraint firstAttribute="width" constant="20" id="WJH-3f-X8A"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="shareIcon"/>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="UCs-LQ-9gI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,6 +92,7 @@
                 <outlet property="addressLabel" destination="LDp-5Y-huB" id="W44-Lk-kzP"/>
                 <outlet property="itemImageView" destination="PVc-As-YUz" id="gH8-yy-7zj"/>
                 <outlet property="priceLabel" destination="Jjc-Xq-X3P" id="TtC-lt-KBL"/>
+                <outlet property="shareButton" destination="IlX-bJ-8iY" id="ZrN-Wb-MVF"/>
                 <outlet property="timeLabel" destination="yt9-GP-iKb" id="lcP-XY-kxn"/>
                 <outlet property="titleLabel" destination="U38-ds-HKH" id="lkh-j4-hHy"/>
             </connections>

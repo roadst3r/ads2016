@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ADTableViewCell.h"
 
-@interface ADsTableViewController : UITableViewController
+@interface ADsTableViewController : UITableViewController <ADCellDelegate>
 
 @end

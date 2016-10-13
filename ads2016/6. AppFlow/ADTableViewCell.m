@@ -10,6 +10,7 @@
 
 @implementation ADTableViewCell
 
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -26,5 +27,12 @@
 
     // Configure the view for the selected state
 }
+- (IBAction)shareButtonPressed:(id)sender {
+    
+    [self.delegate shareActionForIndexPath: _buttonIndexPath sender:sender];
+    
+}
+
+
 
 @end

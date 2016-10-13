@@ -52,7 +52,37 @@
     self.adRequest.nextPageUrl = thisRequest.nextPageUrl;
     self.adRequest.page = thisRequest.page;
     self.adRequest.ads = [NSArray arrayWithArray: adsList];
-
+    self.adRequest.totalPages = thisRequest.totalPages;
+    
+    [self saveDataToDisk];
 }
 
+
+
+#pragma mark Disk access
+
+- (void)saveDataToDisk {
+    
+    NSString *appFile = [self dataFileURL];
+    NSMutableArray *myObject=[NSMutableArray array];
+    [myObject addObject: self.adRequest];
+    
+    [NSKeyedArchiver archiveRootObject:myObject toFile:appFile];
+}
+
+- (void)loadDataFromDisk {
+    
+    NSString *appFile = [self dataFileURL];
+    self.adRequest = [[ADRequest alloc] init];
+    NSMutableArray *array = [NSKeyedUnarchiver unarchiveObjectWithFile:appFile];
+    
+    self.adRequest = (ADRequest*)[array objectAtIndex:0];
+}
+
+- (NSString*)dataFileURL {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return [documentsDirectory stringByAppendingPathComponent:@"data"];
+}
 @end

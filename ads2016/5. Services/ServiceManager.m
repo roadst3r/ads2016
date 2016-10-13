@@ -90,6 +90,9 @@
 - (void)getADsForPage:(NSInteger)page category:(double)category withSuccess:(void (^)())success fail:(void(^)(NSError *error)) fail {
     
     
+//    [[MainManager shared].dataManager loadDataFromDisk];
+//    success();
+
     [AdsService getADsForPage:page category:category withBlock:^(id responseObject, NSError *err) {
         if (err) {
             //throw error

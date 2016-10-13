@@ -7,7 +7,6 @@
 //
 
 #import "ADsTableViewController.h"
-#import "ADTableViewCell.h"
 #import "LoadingMoreTableViewCell.h"
 #import "ADPageViewController.h"
 
@@ -123,6 +122,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    UITableViewCell *cell;
 
     //check for last cell and load more
     if (indexPath.row == [MainManager shared].dataManager.adRequest.ads.count) {
@@ -131,24 +131,27 @@
             [self performSelector:@selector(addSomeMoreEntriesToTableView) withObject:nil afterDelay:0.1f];
         }
         
-        LoadingMoreTableViewCell *cell = (LoadingMoreTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"loadingCell"];
+        cell = (LoadingMoreTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"loadingCell"];
         return cell;
         
     } else {
         
-        ADTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: ADCellIdentifier];
+        ADTableViewCell *c = [tableView dequeueReusableCellWithIdentifier: ADCellIdentifier];
         ADAds *ad = [[MainManager shared].dataManager.adRequest.ads objectAtIndex: indexPath.row];
         
-        cell.titleLabel.text = ad.title;
-        cell.addressLabel.text = ad.cityLabel;
-        cell.priceLabel.text =  [ad.priceNumeric stringByAppendingString:@"€"];
-        cell.timeLabel.text = ad.created;
+        c.titleLabel.text = ad.title;
+        c.addressLabel.text = ad.cityLabel;
+        c.priceLabel.text =  [ad.priceNumeric stringByAppendingString:@"€"];
+        c.timeLabel.text = ad.created;
         
+        c.delegate = self;
+        c.buttonIndexPath = indexPath;
         
-        return cell;
-        
+        cell = c;
     }
     
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    return cell;
 }
 
 
@@ -227,6 +230,34 @@
         ADAds *ad = [[MainManager shared].dataManager.adRequest.ads objectAtIndex: _selectedAD];
         viewController.ads = [MainManager shared].dataManager.adRequest.ads;
         viewController.selectedAD = ad;
+    }
+}
+
+
+#pragma mark - AD Cell Delegate
+-(void)shareActionForIndexPath:(NSIndexPath *)indexPath sender:(id)sender{
+    
+    ADAds *ad = [[MainManager shared].dataManager.adRequest.ads objectAtIndex: indexPath.row];
+    
+    NSArray *objectsToShare = @[ad.title, [NSURL URLWithString: ad.url]];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    
+    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+                                   UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypeAddToReadingList,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo];
+    
+    activityVC.excludedActivityTypes = excludeActivities;
+    
+    if (IS_IPHONE) {
+        [self presentViewController:activityVC animated:YES completion:nil];
+    } else {
+        activityVC.popoverPresentationController.sourceView = sender;
+        
     }
 }
 

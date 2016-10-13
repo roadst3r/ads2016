@@ -36,6 +36,12 @@
     [self.pageViewController didMoveToParentViewController:self];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear: animated];
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -78,7 +84,6 @@
         return nil;
     }
     
-    // Create a new view controller and pass suitable data.
     ADDetailsViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ADDetailsViewController"];
     pageContentViewController.ad = self.ads[index];
     pageContentViewController.pageIndex = index;
