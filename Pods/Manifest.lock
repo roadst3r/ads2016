@@ -14,6 +14,12 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - DACircularProgress (2.3.1)
+  - IDMPhotoBrowser (1.9.1):
+    - DACircularProgress
+    - pop
+    - SDWebImage
+  - pop (1.0.9)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -21,14 +27,18 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - IDMPhotoBrowser
   - SDWebImage
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  IDMPhotoBrowser: 35e8ba559a88f2a8be4ae04d7fd424665344ba06
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: f0df7639c5eb679a1b566fec0e118fc017446389
+PODFILE CHECKSUM: d934366eaa3b99ccee98dd2008be1c8f23b96f35
 
 COCOAPODS: 1.0.1

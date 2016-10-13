@@ -146,6 +146,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="photoImageView" destination="iZx-Sl-Nz7" id="tLh-he-Mu5"/>
+                                            <outlet property="photosButton" destination="kdp-zF-P4q" id="xwR-Fo-sTh"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailsDescriptionCell" rowHeight="40" id="s0U-GT-y0U" customClass="ADDescriptionTableViewCell">

@@ -13,6 +13,8 @@
 #import "ADMapTableViewCell.h"
 #import "ADPriceTableViewCell.h"
 
+#import "IDMPhotoBrowser.h"
+
 @interface ADDetailsViewController () {
     
     NSMutableArray *_dummyPhotos;
@@ -133,6 +135,8 @@
             ADPhotoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DetailsPhotoCell"];
             
             [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString: [_dummyPhotos objectAtIndex:0]] placeholderImage:[UIImage imageNamed:@"photoPlaceholder"]];
+            [cell.photosButton addTarget:self action:@selector(openPhotoBrowser:) forControlEvents:UIControlEventTouchUpInside];
+            
             
             [self applyShadowToLayer: cell.layer];
             return cell;
@@ -254,6 +258,23 @@
     }
     
     return 0;
+}
+
+#pragma mark Photo Browser Methods
+-(void)openPhotoBrowser:(id)sender {
+    
+    // Create an array to store IDMPhoto objects
+    NSMutableArray *photos = [NSMutableArray new];
+    
+    for (NSString *url in _dummyPhotos) {
+        NSURL *u = [NSURL URLWithString:url];
+        IDMPhoto *photo = [IDMPhoto photoWithURL:u];
+        [photos addObject:photo];
+    }
+    
+    
+    IDMPhotoBrowser *browser = [[IDMPhotoBrowser alloc] initWithPhotos:photos animatedFromView:sender];
+    [self presentViewController:browser animated:YES completion:nil];
 }
 
 @end

@@ -12,5 +12,6 @@
 @interface ADPhotoTableViewCell : AdGenericTableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UIButton *photosButton;
 
 @end
