@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ads2016/6. AppFlow/ADDetailsViewController.m"
-            timestampString = "498088327.702964"
+            timestampString = "498089256.251386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "-openPhotoBrowser:"
             landmarkType = "7">
          </BreakpointContent>

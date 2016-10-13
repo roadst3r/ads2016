@@ -169,12 +169,19 @@
             cell.mapView.region = MKCoordinateRegionMakeWithDistance(coordinate, 15000, 15000);
             
             //drop a simple Annotation on map
-            UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0,0,20,20)];
+            
+            //reuse view if possible
+            UIView *v = [cell.contentView viewWithTag: 999];
+            if (!v){
+                v = [[UIView alloc] initWithFrame:CGRectMake(0,0,20,20)];
+                v.tag = 999;
+            }
             v.center = cell.contentView.center;
             UIImage *image = [UIImage imageNamed:@"mapPin"];
             UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
             imageView.frame = v.bounds;
             [v addSubview:imageView];
+            
             [cell.contentView addSubview:v];
             
             [self applyShadowToLayer: cell.layer];
