@@ -25,12 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.tableView.layer.shadowOpacity = 0.1;
-    self.tableView.layer.shadowOffset = CGSizeMake(0, 0);
-    self.tableView.layer.shadowRadius = 3;
-    self.tableView.layer.masksToBounds = NO;
-    
-    [self.tableView setContentInset:UIEdgeInsetsMake(0, 16, 0, 0)]; // 108 is only example
+//    [self.tableView setContentInset:UIEdgeInsetsMake(0, 16, 0, 0)]; // 108 is only example
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,26 +47,48 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 5;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 8.0f;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *v = [UIView new];
+    [v setBackgroundColor:[UIColor clearColor]];
+    return v;
+}
+
+- (void)applyShadowToLayer: (CALayer*)layer {
+    
+//    layer.cornerRadius = 5.0f;
+    layer.shadowOpacity = 0.05;
+    layer.shadowOffset = CGSizeMake(0, 0);
+    layer.shadowRadius = 2;
+    layer.masksToBounds = NO;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
+    switch (indexPath.section) {
         case 0:
         {
             ADDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DetailsTitleCell"];
             cell.titleLabel.text = _ad.title;
             cell.locationLabel.text = _ad.cityLabel;
             cell.timeLabel.text = _ad.created;
+            
+            [self applyShadowToLayer: cell.layer];
             
             return cell;
             
@@ -81,6 +98,7 @@
         {
             ADPhotoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DetailsPhotoCell"];
             
+            [self applyShadowToLayer: cell.layer];
             return cell;
             
             break;
@@ -94,23 +112,30 @@
             desc = [desc stringByReplacingOccurrencesOfString:@"\\n" withString:myNewLineStr];
             cell.descLabel.text = desc;
             
-            return cell;
-            
-            break;
-        }
-        case 3:
-        {
-            ADMapTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DetailsMapCell"];
-            
+            [self applyShadowToLayer: cell.layer];
             return cell;
             
             break;
         }
         case 4:
         {
+            ADMapTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DetailsMapCell"];
+            
+            [self applyShadowToLayer: cell.layer];
+            return cell;
+            
+            break;
+        }
+        case 3:
+        {
             ADPriceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DetailsPriceCell"];
             cell.priceLabel.text = [_ad.priceNumeric stringByAppendingString: @"€"];
+            cell.userNameLabel.text = _ad.userLabel;
+            cell.userOnlineLabel.text = @"Was online today";
             
+            [cell.userImageView sd_setImageWithURL: [NSURL URLWithString: _ad.userPhoto] placeholderImage: [UIImage imageNamed:@"avatarPlaceholder"]];
+            
+            [self applyShadowToLayer: cell.layer];
             return cell;
             
             break;
@@ -126,7 +151,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    switch (indexPath.row) {
+    switch (indexPath.section) {
         case 0:
         {
             ADDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"DetailsTitleCell"];
@@ -135,7 +160,9 @@
             cell.locationLabel.text = _ad.cityLabel;
             cell.timeLabel.text = _ad.created;
             
-            return cell.titleLabel.frame.size.height + 28;
+            [cell setupSize];
+            
+            return cell.cellHeight;
             
             break;
         }
@@ -153,18 +180,18 @@
             desc = [desc stringByReplacingOccurrencesOfString:@"\\n" withString:myNewLineStr];
             cell.descLabel.text = desc;
             
-            [cell.descLabel sizeToFit];
+            [cell setupSize];
             
-            return cell.descLabel.frame.size.height + 45;
+            return cell.cellHeight;
             
             break;
         }
-        case 3:
+        case 4:
         {
             return 120;
             break;
         }
-        case 4:
+        case 3:
         {
             
             return 50;

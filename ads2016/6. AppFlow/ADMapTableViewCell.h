@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+#import "AdGenericTableViewCell.h"
 
-@interface ADMapTableViewCell : UITableViewCell
+@interface ADMapTableViewCell : AdGenericTableViewCell
+
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdGenericTableViewCell.h"
 
-@interface ADDetailsTableViewCell : UITableViewCell
+@interface ADDetailsTableViewCell : AdGenericTableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;

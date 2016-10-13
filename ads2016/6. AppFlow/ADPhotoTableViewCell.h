@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdGenericTableViewCell.h"
 
-@interface ADPhotoTableViewCell : UITableViewCell
+@interface ADPhotoTableViewCell : AdGenericTableViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 
 @end

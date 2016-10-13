@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdGenericTableViewCell.h"
 
-@interface ADDescriptionTableViewCell : UITableViewCell
+@interface ADDescriptionTableViewCell : AdGenericTableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 
 @end

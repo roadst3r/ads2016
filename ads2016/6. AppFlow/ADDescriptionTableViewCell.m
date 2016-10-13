@@ -21,4 +21,18 @@
     // Configure the view for the selected state
 }
 
+- (void)setupSize{
+    
+    [self setFrame: CGRectMake(self.frame.origin.x, self.frame.origin.y, SCREEN_WIDTH, self.frame.size.height)];
+    
+    [_descLabel setFrame: CGRectMake(_descLabel.frame.origin.x,
+                                      _descLabel.frame.origin.y,
+                                      SCREEN_WIDTH - LABEL_MARGIN,
+                                      _descLabel.frame.size.height)];
+    [_descLabel sizeToFit];
+    
+    self.cellHeight = _descLabel.frame.origin.y + _descLabel.frame.size.height + 20;
+}
+
+
 @end

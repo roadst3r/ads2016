@@ -38,6 +38,7 @@
 		C4D604A71DAEFA080092A015 /* ADDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604A61DAEFA080092A015 /* ADDescriptionTableViewCell.m */; };
 		C4D604AA1DAEFA120092A015 /* ADPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604A91DAEFA120092A015 /* ADPriceTableViewCell.m */; };
 		C4D604AC1DAEFB3A0092A015 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D604AB1DAEFB3A0092A015 /* MapKit.framework */; };
+		C4D604AF1DAF04FB0092A015 /* AdGenericTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D604AE1DAF04FB0092A015 /* AdGenericTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,8 @@
 		C4D604A81DAEFA120092A015 /* ADPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPriceTableViewCell.h; sourceTree = "<group>"; };
 		C4D604A91DAEFA120092A015 /* ADPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPriceTableViewCell.m; sourceTree = "<group>"; };
 		C4D604AB1DAEFB3A0092A015 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C4D604AD1DAF04FB0092A015 /* AdGenericTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdGenericTableViewCell.h; sourceTree = "<group>"; };
+		C4D604AE1DAF04FB0092A015 /* AdGenericTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdGenericTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +317,8 @@
 				C4D604A61DAEFA080092A015 /* ADDescriptionTableViewCell.m */,
 				C4D604A81DAEFA120092A015 /* ADPriceTableViewCell.h */,
 				C4D604A91DAEFA120092A015 /* ADPriceTableViewCell.m */,
+				C4D604AD1DAF04FB0092A015 /* AdGenericTableViewCell.h */,
+				C4D604AE1DAF04FB0092A015 /* AdGenericTableViewCell.m */,
 			);
 			name = ADDetails;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D604AF1DAF04FB0092A015 /* AdGenericTableViewCell.m in Sources */,
 				C4D6049E1DAEF8C10092A015 /* ADDetailsTableViewCell.m in Sources */,
 				C4D6049A1DAEEDB40092A015 /* ADPageViewController.m in Sources */,
 				C4D604811DAE5AE40092A015 /* ADPhotos.m in Sources */,

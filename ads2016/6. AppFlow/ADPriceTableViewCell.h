@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdGenericTableViewCell.h"
 
-@interface ADPriceTableViewCell : UITableViewCell
+@interface ADPriceTableViewCell : AdGenericTableViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *userOnlineLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @end
